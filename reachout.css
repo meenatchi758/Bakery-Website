@@ -837,41 +837,40 @@ input, textarea {
 .footer-container {
     max-width: 90%;
 }
+
     .contact-section {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 30px;
+        padding: 20px;
+        gap: 20px;
     }
 
     .contact-container {
-        width: 80%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        width: 100%;
+      display: flex;
+        max-width: 100%;
         border-radius: 50px;
     }
 
     .contact-info {
-        width: 70%;
-        padding: 25px;
-        font-size: 20px;
+        width: 60%;  /* Slightly reduce width to fit better */
+        margin: 20px;
+        font-size: 16px;
     }
 
     .contact-info h2 {
-        font-size: 30px;
-        text-decoration: underline;
+        font-size: 28px;
+        margin-left: 0;
     }
 
     .contact-info p {
-        font-size: 20px;
+        font-size: 24px;
+        margin-left: 0;
     }
 
     .contact-form {
-        width: 60%;
-        padding: 25px;
-        border-radius: 40px;
-        background: #FFE4E1;
+        width: 50%;  /* Adjust form width */
+        margin-top: 0;
+        margin-left: -50px;  /* Reduce overlap */
+        padding: 15px;
     }
 
     .contact-form h2 {
@@ -880,34 +879,16 @@ input, textarea {
 
     .contact-form input,
     .contact-form textarea {
-        width: 80%;;
-        padding: 16px;
-        font-size: 20px;
-        border-radius: 20px;
-        border: 2px solid #5D4037;
-        margin-bottom: 14px;
-        background: #fff;
-    }
-
-    .contact-form textarea {
-        height: 120px;
+        width: 80%;
+        padding: 15px;
+        margin: 15px auto;
     }
 
     .contact-form button {
-        width: 80%;
-        padding: 16px;
-        font-size: 20px;
-        border-radius: 20px;
-        background-color: #5D4037;
-        color: white;
-        font-weight: bold;
-        border: none;
-        cursor: pointer;
+        width: 35%;
+        margin-left: 15%;
     }
-
-    .contact-form button:hover {
-        background: #D81B60;
-    }
+}
 }
 
 /* Mobile Responsive Styles */
@@ -947,9 +928,10 @@ input, textarea {
 
     .contact-form {
         width: 100%;
-        margin: 20px 0 0 0;
+        margin: 30px;
         padding: 20px;
         border-radius: 30px;
+        
     }
 
     .contact-form h2 {
@@ -1002,4 +984,224 @@ input, textarea {
         padding: 10px;
     }
 }
+/* ================ */
+/* Base Styles */
+/* ================ */
 
+
+/* ================ */
+/* Contact Section */
+/* ================ */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.contact-container {
+    display: flex;
+    
+    background-color: #F8BBD0;
+    width: 100%;
+    max-width: 1200px;
+    background: #FFE4E1;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-info {
+    flex: 1;
+    padding: 40px;
+    color: #3E2723;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.contact-info a {
+    color: #5D4037;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #D81B60;
+}
+
+.contact-form {
+    flex: 1;
+    padding: 70px;
+    background:#FFE4E1;
+}
+
+.contact-form h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 30px;
+    color: #3E2723;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 70%;
+    padding: 15px;
+    border: 1px solid #5D4037;
+    border-radius: 15px;
+    font-size: 1rem;
+    background: #fff;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form button {
+    width: 50%;
+    padding: 15px;
+    background: #5D4037;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 0 auto;
+}
+
+.contact-form button:hover {
+    background: #D81B60;
+}
+
+/* ================ */
+/* Responsive Styles */
+/* ================ */
+
+/* Large Laptop (1280px) */
+@media screen and (max-width: 1280px) {
+    .contact-info h2 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-info p {
+        font-size: 1.3rem;
+    }
+}
+
+/* Laptop (1024px) */
+@media screen and (max-width: 1024px) {
+    .contact-container {
+        border-radius: 40px;
+    }
+    
+    .contact-info,
+    .contact-form {
+        padding: 30px;
+    }
+    
+    .contact-info h2 {
+        font-size: 1.6rem;
+    }
+    
+    .contact-info p {
+        font-size: 1.1rem;
+    }
+    
+    .contact-form h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Tablet (768px) */
+@media screen and (max-width: 768px) {
+    .contact-section {
+        padding: 30px 15px;
+    }
+    
+    .contact-container {
+        flex-direction: column;
+        border-radius: 30px;
+    }
+    
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        padding: 30px;
+    }
+    
+    .contact-form button {
+        width: 60%;
+    }
+}
+
+/* Large Mobile (600px) */
+@media screen and (max-width: 600px) {
+    .contact-info h2 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-info p {
+        font-size: 1rem;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px;
+    }
+}
+
+/* Mobile (480px) */
+@media screen and (max-width: 480px) {
+    .contact-section {
+        padding: 20px 10px;
+    }
+    
+    .contact-container {
+        border-radius: 20px;
+    }
+    
+    .contact-info,
+    .contact-form {
+        padding: 20px;
+    }
+    
+    .contact-form h2 {
+        font-size: 1.3rem;
+    }
+    
+    .contact-form button {
+        width: 70%;
+        padding: 12px;
+    }
+}
+
+/* Small Mobile (320px) */
+@media screen and (max-width: 320px) {
+    .contact-info h2 {
+        font-size: 1.3rem;
+    }
+    
+    .contact-form button {
+        width: 80%;
+    }
+}
