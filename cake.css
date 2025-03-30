@@ -1018,8 +1018,8 @@ margin-bottom: 5px;;
             }
             .cake-container {
                 display: flex;
-                margin-left:-30px;
-                justify-content: center;
+             
+             flex-direction: column;
                 gap: 20px;
                 /* flex-wrap: wrap; */
             }
@@ -1036,13 +1036,13 @@ margin-bottom: 5px;;
            
             
             .cake-card img {
-            width:150px;
+            width:280px;
             height:300px;   
             }
             
             
             .cake-label {
-                width:150px;
+                width:280px;
                 height:100px;
                 
                 background: #5D4037; 
@@ -1439,3 +1439,4 @@ margin-bottom: 5px;;
     }
 }
 
+h
