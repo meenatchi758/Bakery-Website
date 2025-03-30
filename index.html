@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page - Add to Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="cart.html">🛒 View Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+
+    <div class="product">
+        <h2>Chocolate Cake</h2>
+        <p>Price: ₹150</p>
+        <button onclick="addToCart('Chocolate Cake', 150)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <h2>Red Velvet Cake</h2>
+        <p>Price: ₹200</p>
+        <button onclick="addToCart('Red Velvet Cake', 200)">Add to Cart</button>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>

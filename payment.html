@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Payment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .payment-container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .payment-header img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+        h2 {
+            color: #5D4037;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .payment-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 25px 0;
+        }
+        .payment-option {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            padding: 15px;
+            border: 2px solid #eee;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+        .payment-option:hover {
+            border-color: #5D4037;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(93, 64, 55, 0.1);
+        }
+        .payment-option input[type="radio"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ddd;
+            border-radius: 50%;
+            outline: none;
+            transition: all 0.2s ease;
+            position: relative;
+            cursor: pointer;
+        }
+        .payment-option input[type="radio"]:checked {
+            border-color: #5D4037;
+            background-color: #5D4037;
+        }
+        .payment-option input[type="radio"]:checked::after {
+            content: "";
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+        }
+        .payment-icon {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+        .payment-details {
+            flex: 1;
+        }
+        .payment-name {
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 3px;
+        }
+        .payment-description {
+            font-size: 13px;
+            color: #777;
+        }
+        .pay-now-btn {
+            background: #5D4037;
+            color: white;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 500;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .pay-now-btn:hover {
+            background: #8D6E63;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(93, 64, 55, 0.2);
+        }
+        .pay-now-btn:active {
+            transform: translateY(0);
+        }
+        .success-message {
+            display: none;
+            color: #4CAF50;
+            margin-top: 20px;
+            font-weight: 500;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px;
+            background: #f0f8f0;
+            border-radius: 8px;
+        }
+        .security-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        @media (max-width: 480px) {
+            .payment-container {
+                padding: 20px;
+            }
+            .payment-option {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="payment-container">
+        <div class="payment-header">
+            <img src="https://cdn-icons-png.flaticon.com/512/545/545682.png" alt="Secure Payment">
+            <h2>Select Payment Method</h2>
+        </div>
+        
+        <div class="payment-methods">
+            <label class="payment-option">
+                <input type="radio" name="payment" value="Credit Card">
+                <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png" alt="Credit Card" class="payment-icon">
+                <div class="payment-details">
+                    <div class="payment-name">Credit Card</div>
+                    <div class="payment-description">Visa, Mastercard, American Express</div>
+                </div>
+            </label>
+            
+            <label class="payment-option">
+                <input type="radio" name="payment" value="Debit Card">
+                <img src="https://cdn-icons-png.flaticon.com/512/179/179457.png" alt="Debit Card" class="payment-icon">
+                <div class="payment-details">
+                    <div class="payment-name">Debit Card</div>
+                    <div class="payment-description">All major bank debit cards</div>
+                </div>
+            </label>
+            
+            <label class="payment-option">
+                <input type="radio" name="payment" value="UPI">
+                <img src="https://cdn-icons-png.flaticon.com/512/825/825454.png" alt="UPI" class="payment-icon">
+                <div class="payment-details">
+                    <div class="payment-name">UPI Payment</div>
+                    <div class="payment-description">Google Pay, PhonePe, Paytm, etc.</div>
+                </div>
+            </label>
+            
+            <label class="payment-option">
+                <input type="radio" name="payment" value="Net Banking">
+                <img src="https://cdn-icons-png.flaticon.com/512/3050/3050154.png" alt="Net Banking" class="payment-icon">
+                <div class="payment-details">
+                    <div class="payment-name">Net Banking</div>
+                    <div class="payment-description">All major Indian banks</div>
+                </div>
+            </label>
+            
+            <label class="payment-option">
+                <input type="radio" name="payment" value="Wallet">
+                <img src="https://cdn-icons-png.flaticon.com/512/2503/2503197.png" alt="Wallet" class="payment-icon">
+                <div class="payment-details">
+                    <div class="payment-name">Wallet</div>
+                    <div class="payment-description">Paytm Wallet, Mobikwik, etc.</div>
+                </div>
+            </label>
+        </div>
+        
+        <button id="payNow" class="pay-now-btn">
+            <i class="fas fa-lock"></i> Pay Now
+        </button>
+        
+        <div class="success-message" id="successMsg">
+            <i class="fas fa-check-circle"></i> Payment Successful! Redirecting...
+        </div>
+        
+        <div class="security-badge">
+            <i class="fas fa-lock"></i>
+            <span>Secure & Encrypted Payment</span>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("payNow").addEventListener("click", () => {
+            const selectedPayment = document.querySelector('input[name="payment"]:checked');
+            
+            if (!selectedPayment) {
+                alert("Please select a payment method before proceeding!");
+                return;
+            }
+
+            // Show success message
+            const successMsg = document.getElementById("successMsg");
+            successMsg.style.display = "flex";
+            
+            // Disable the button to prevent multiple clicks
+            document.getElementById("payNow").disabled = true;
+            
+            // Clear cart and update count
+            localStorage.removeItem("cart");
+            localStorage.setItem("cartCount", "0");
+            
+            // Dispatch event to update cart count in other tabs
+            window.dispatchEvent(new Event('cartUpdated'));
+            window.location.href = "add.html?payment=success";
+            
+            // Redirect after 2 seconds
+            setTimeout(() => {
+                window.location.href = "cakes.html?payment=success";
+            }, 2000);
+        });
+        
+        // Select first payment method by default
+        document.querySelector('.payment-option input[type="radio"]').checked = true;
+    </script>
+
+</body>
+</html>

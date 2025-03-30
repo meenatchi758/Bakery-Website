@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="reachout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./images/bakerylogo.png" alt="Sweet Cake Logo">
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-links">
+            <li><a href="identity.html">HOME</a></li>
+            <li><a href="pastries.html">THEMED</a></li>
+            <li><a href="pastries.html">PASTRIES</a></li>
+            <li><a href="desserts.html">BREAD/DESSERTS</a></li>
+            <li><a href="bread.html">BEVERAGES</a></li>
+            <li><a href="cakes.html">OUR IDENTITY</a></li>
+            <li><a href="reachout.html">REACH OUT</a></li>
+        </ul>
+    </nav>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navLinks = document.querySelector(".nav-links");
+        
+            menuToggle.addEventListener("click", function () {
+                navLinks.classList.toggle("active");
+            });
+        });
+            </script>
+
+    <div class="banner">
+        <!-- <img src="./images/download (1).jpeg"> -->
+    </div>
+    <br><br><br>
+    <h2>TOUCH BASE WITH US</h2><br><br><br>
+
+    <div class="contact-section">
+        <div class="contact-container">
+          
+            <div class="contact-info">
+                <h2>OUR VENUE:</h2>
+                <p>New No: 22, Old No: 40, 3rd Street, East ABC, XYZ, Chennai-6000XX</p>
+                <br><br><br><br>
+                <h2>REACH US:</h2>
+                <p>+91 9123456789</p>
+<br><br><br>
+                <h2>WRITE TO US:</h2>
+                <p><a href="mailto:sweetcakebakers@gmail.com">sweetcakebakers@gmail.com</a></p>
+            </div>
+            </div>
+
+          
+            <div class="contact-form">
+                <h2>CONTACT US</h2>
+                <form id="enquiryForm">
+                    <input type="text" name="name" placeholder="Name" required 
+                           pattern="[A-Za-z ]+" minlength="3" maxlength="50"
+                           title="Please enter only letters (3-50 characters)">
+                    
+                    <input type="tel" name="contact" placeholder="Contact" required
+                           pattern="[0-9]{10}" title="Please enter a 10-digit phone number">
+                    
+                    <input type="email" name="email" placeholder="Mail ID" required
+                           title="Please enter a valid email address">
+                    
+                    <textarea name="message" rows="4" cols="6" placeholder="Type Your Enquiry" 
+                              required minlength="10" maxlength="500"
+                              title="Please enter at least 10 characters"></textarea>
+                    
+                    <button type="submit">SEND IN</button>
+                </form>
+            </div>
+            <br><br><br><br>
+        </div>
+    </section>
+
+    <br><br><br><br>
+    <footer class="footer">
+        <div class="footer-container">
+        
+            <div class="footer-logo">
+                <img src="./images/bakerylogo.png" alt="Sweet Cake Logo">
+            </div>
+            <div class="footer-section">
+                <h3>QUICK LINKS</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Order Now</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Our Tale</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>OUR VENUE</h3>
+                <p>New No: 22, Old No: 40,<br> Street, East ABC, XYZ,<br> Chennai</p>
+                <p>9123456789</p>
+                <p><a href="mailto:sweetcakebakers@gmail.com">sweetcakebakers@gmail.com</a></p>
+            </div>
+            <br><br>
+            <div class="footer-section">
+                <h3>WE ARE SOCIAL</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="./images/whatsapp-icon-free-png.webp" alt="WhatsApp"></a>
+                    <a href="#"><img src="./images/Instagram_icon.png.webp" alt="Instagram"></a>
+                    <a href="#"><img src="./images/facebook-logo-icon-free-png.webp" alt="Facebook"></a>
+                    <a href="#"><img src="./images/youtube-7949229_1280.webp" alt="YouTube"></a>
+                    <a href="#"><img src="./images/OIP.jpg" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="footer-bottom">
+            <p>Copyright 2025 MN Organic India Pvt. Ltd.</p>
+        </div>
+    </footer>
+    <br><br><br><br><br><br><br>
+
+</body>
+</html>

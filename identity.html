@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Cake Navigation</title>
+    <link rel="stylesheet" href="cake.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./images/bakerylogo.png" alt="Sweet Cake Logo">
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-links">
+            <li><a href="">HOME</a></li>
+            <li><a href="pastries.html">THEMED</a></li>
+            <li><a href="pastries.html">PASTRIES</a></li>
+            <li><a href="desserts.html">BREAD/DESSERTS</a></li>
+            <li><a href="bread.html">BEVERAGES</a></li>
+            <li><a href="identity.html">OUR IDENTITY</a></li>
+            <li><a href="reachout.html">REACH OUT</a></li>
+            </ul>
+            <div class="cart-icon">
+                <a href="cart.html">
+                    <a href="addtocart.html" class="add-to-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+            
+       
+    </nav>
+    <script>
+       function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("active");
+}
+    </script>
+    <div class="container1">
+        <div class="search-box">
+            <label for="search"></label>
+            <i class="fa fa-search" aria-hidden="true"></i>
+<input type="text" id="search" placeholder="Search">
+            
+        </div>
+      
+        <div class="buttons">
+          
+            <a href="ordernow.html" class="order-now">ORDER NOW</a>
+            <a href="#" class="login-signup" onclick="openModal()">LOGIN/SIGN UP</a><br>
+
+        </div>
+        </div>
+    <div class="image">
+    <div class="carousel-container">
+        <div class="carousel-track">
+        <img src="./images/download.jpeg" alt="Cake 1">
+        <img src="./images/Rustic Romance_ 20 Burnt Orange Wedding Ideas.jpeg" alt="Cake 2">
+        <img src="./images/Make a Splash_ 15 Mermaid Birthday Party Ideas for Little Girls.jpeg" alt="Cake 5">
+        <img src="./images/20 Fun Baby Boy 1st Birthday Party Ideas.jpeg" alt="Cake 3">
+        <img src="./images/29 Wedding Cake Ideas.jpeg" alt="Cake 4">
+        <img src="./images/cake6.jpeg" alt="Cake 6">
+        <img src="./images/cake2.jpeg" alt="Cake 7">
+        <img src="./images/cake8.jpeg" alt="Cake 8">
+        <img src="./images/cake9.jpeg" alt="Cake 9">
+        <img src="./images/cake10.jpeg" alt="Cake 10">
+    </div>
+    </div>
+    </div>
+
+    <script>
+        const track = document.querySelector(".carousel-track");
+
+        function moveCarousel() {
+            let firstImage = track.firstElementChild;
+            track.style.transition = "transform 1.5s linear";
+            track.style.transform = `translateX(-${firstImage.clientWidth + 10}px)`;
+
+            setTimeout(() => {
+                track.appendChild(firstImage); 
+                track.style.transition = "none"; 
+                track.style.transform = "translateX(0)";
+            }, 500);
+        }
+
+        setInterval(moveCarousel, 2000000000);
+    </script>
+
+    <div class="our-tale">
+        <h2>OUR TALE</h2><br>
+        <p>Egg-free. Vegetarian. Vegan. We Promise!</p>
+        <p>Keeping taste and texture our highest priority in the construction of our desserts, we bring to you a range of healthy delights that celebrating any occasion in your calendar! There's something for everyone here... From petite desserts to rich cakes to themed cakes with celebrations! We make you what you want, in the flavors and flour as per your wish. Pleased to have won many hearts with our vegetarian flag soaring high, we continue with our motto of creating egg-free desserts without any compromise.</p>
+    </div>
+    <section class="cake-section">
+        <h2>IN VOGUE</h2><br>
+
+
+        <div class="cake-container">
+            <div class="cake-card">
+                <img src="images/Biscoff Drip Cake.jpeg" alt="Rasmalai Cake">
+                <div class="cake-label">BISCOFF DRIP CAKE</div>
+            </div>
+            <div class="cake-card">
+                <img src="./images/1485531666198.webp" alt="Raspberry Cheesecake">
+                <div class="cake-label">RASPBERRY CAKE</div>
+            </div>
+            <div class="cake-card">
+                <img src="./images/Rasmalai Cake Recipe - Eggless Ras malai Cake.jpeg" alt="Biscoff Drip Cake">
+                <div class="cake-label">RASAMALAI CAKE</div>
+            </div>
+            <div class="cake-card">
+                <img src="images/Tender Coconut Pudding (foodgawker).jpeg" alt="Rasmalai Cake">
+                <div class="cake-label">ELANEER PUDDING</div>
+            </div>
+            <div class="cake-card">
+                <img src="images/Lemon Mascarpone Layer Cake _ MUST TRY Lemon Cake Recipe!.jpeg" alt="Rasmalai Cake">
+                <div class="cake-label">LEMON CAKE</div>
+            </div>
+            <div class="cake-card">
+                <img src="images/Ferrero Rocher Showstopper Cake.jpeg" alt="Rasmalai Cake">
+                <div class="cake-label">FERRO ROCHER CAKE</div>
+            </div>
+            <div class="cake-card">
+                <img src="images/Melodi Dubai Çikolatası.jpeg" alt="Rasmalai Cake">
+                <div class="cake-label">KUNAFA CHOCOLATE</div>
+            </div>
+            <div class="cake-card">
+                <img src="images/Rose Milk Cake - Bake with Shivesh.jpeg" alt="Raspberry Cheesecake">
+                <div class="cake-label">ROSEMILK CAKE</div>
+            </div>
+            
+            <div class="cake-card">
+                <img src="images/p-indulgent-choco-dream-cake-half-kg--285071-m.webp" alt="Rasmalai Cake">
+                <div class="cake-label">CHOCO CAKE</div>
+            </div>
+
+        </div>
+    </section>
+    <br><br><br>
+    <div class="form">
+        <div class="form-container">
+            <figcaption>ENQUIRY FORM</figcaption><br><br>
+            <p>Let Us Know About Your Taste!!<br>We Will Customise It Without Any Compromise!!</p><br><br>
+
+            <form id="enquiryForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="text" id="eggType" placeholder="Egg/Eggless" required>
+                </div><br><br>
+
+                <div class="form-group">
+                    <input type="tel" id="contact" placeholder="Contact" required>
+                    <input type="text" id="flour" placeholder="Which Flour To Be Used?" required>
+                </div>
+                <br><br>
+
+                <div class="form-group">
+                    <input type="email" id="mail" placeholder="Mail ID" required>
+                    <input type="text" id="occasion" placeholder="Occasion" required>
+                </div>
+                <br><br>
+                <div class="form-group">
+                    <textarea id="occasionText" placeholder="Type Your Occasion" rows="3" cols="5" required></textarea>
+                </div>
+                <br><br>
+
+                <button type="submit">Convey Us</button>
+            </form>
+        </div>
+    </div>
+    <br><br><br><br>
+    <footer class="footer">
+        <div class="footer-container">
+        
+            <div class="footer-logo">
+                <img src="./images/bakerylogo.png" alt="Sweet Cake Logo">
+            </div>
+            <div class="footer-section">
+                <h3>QUICK LINKS</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Order Now</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Our Tale</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>OUR VENUE</h3>
+                <p>New No: 22, Old No: 40,<br> Street, East ABC, XYZ,<br> Chennai</p>
+                <p>9123456789</p>
+                <p><a href="mailto:sweetcakebakers@gmail.com">sweetcakebakers@gmail.com</a></p>
+            </div>
+            <br><br>
+            <div class="footer-section">
+                <h3>WE ARE SOCIAL</h3>
+                <div class="social-icons">
+                    <a href="https://7labs.io/a/whatsapp-direct/"><img src="./images/whatsapp-icon-free-png.webp" alt="WhatsApp"></a>
+                    <a href="https://www.instagram.com/"><img src="./images/Instagram_icon.png.webp" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/"><img src="./images/facebook-logo-icon-free-png.webp" alt="Facebook"></a>
+                    <a href="https://www.youtube.com/"><img src="./images/youtube-7949229_1280.webp" alt="YouTube"></a>
+                    <a href="https://x.com/"><img src="./images/OIP.jpg" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="footer-bottom">
+            <p>Copyright 2025 MN Organic India Pvt. Ltd.</p>
+        </div>
+    </footer>
+    <br><br><br><br><br><br><br>
+    <!-- Add this right before your closing </body> tag -->
+
+
+<!-- Your existing HTML content -->
+
+<!-- Login Modal -->
+<div class="login-modal" id="loginModal" style="display: none;">
+<div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>WELCOME TO SWEET DESSERT HOUSE CAKE</h2>
+    <br><br><br>
+    <!-- Login Form -->
+    <form class="login-form" id="loginForm">
+        <div class="input-group">
+            <input type="text" id="loginName" placeholder="Name" required>
+            <span class="error-message" id="loginNameError"></span>
+        </div>
+        
+        <div class="input-group">
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <span class="error-message" id="loginEmailError"></span>
+        </div>
+        
+        <div class="input-group">
+            <input type="tel" id="loginMobile" placeholder="Mobile Number" required>
+            <span class="error-message" id="loginMobileError"></span>
+        </div>
+        
+        <div class="input-group">
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <span class="error-message" id="loginPasswordError"></span>
+        </div>
+        
+        <button type="submit" class="btn">LOGIN</button>
+    </form>
+</div>
+</div>
+
+<!-- Success Popup -->
+<div class="popup" id="popup">
+<img src="./images/bakerylogo.png" alt="Sweet Cake Logo">
+<p>Welcome To Sweet Cake House</p>
+<p>You are now logged in!</p>
+</div>
+
+    <script>
+        // Modal Functions
+        function openModal() {
+            document.getElementById('loginModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('loginModal').classList.remove('active');
+            clearErrors();
+        }
+
+        function clearErrors() {
+            document.querySelectorAll('.error-message').forEach(el => {
+                el.textContent = '';
+            });
+        }
+
+        function showError(elementId, message) {
+            document.getElementById(elementId).textContent = message;
+        }
+
+        // Login Form Submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            clearErrors();
+            
+            const name = document.getElementById('loginName').value.trim();
+            const email = document.getElementById('loginEmail').value.trim();
+            const mobile = document.getElementById('loginMobile').value.trim();
+            const password = document.getElementById('loginPassword').value.trim();
+            
+            let isValid = true;
+            
+            if (!name) {
+                showError('loginNameError', 'Name is required');
+                isValid = false;
+            }
+            
+            if (!email) {
+                showError('loginEmailError', 'Email is required');
+                isValid = false;
+            } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+                showError('loginEmailError', 'Invalid email format');
+                isValid = false;
+            }
+            
+            if (!mobile) {
+                showError('loginMobileError', 'Mobile number is required');
+                isValid = false;
+            } else if (!/^\d{10}$/.test(mobile)) {
+                showError('loginMobileError', 'Enter a valid 10-digit number');
+                isValid = false;
+            }
+            
+            if (!password) {
+                showError('loginPasswordError', 'Password is required');
+                isValid = false;
+            } else if (password.length < 6) {
+                showError('loginPasswordError', 'Password must be at least 6 characters');
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Show success popup
+                document.getElementById('popup').style.display = 'block';
+                setTimeout(() => {
+                    document.getElementById('popup').style.display = 'none';
+                    closeModal();
+                }, 3000);
+                this.reset();
+            }
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(e) {
+            if (e.target === document.getElementById('loginModal')) {
+                closeModal();
+            }
+        });
+        function openModal() {
+    document.getElementById("loginModal").style.display = "flex";
+}
+
+// Close Modal Function
+function closeModal() {
+    document.getElementById("loginModal").style.display = "none";
+}
+
+// Close modal when clicking outside the box
+window.onclick = function(event) {
+    let modal = document.getElementById("loginModal");
+    if (event.target === modal) {
+        closeModal();
+    }
+};
+    </script>
+
+<script src="./assets/cart1.js" defer></script>
+<script src="./cake2.js"></script>
+
+</body>
+</html>
+

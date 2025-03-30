@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Cake Navigation</title>
+    <link rel="stylesheet" href="ordernow.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./images/bakerylogo.png" alt="Sweet Cake Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="cakes.html">HOME</a></li>
+            <li><a href="pastries.html">THEMED</a></li>
+            <li><a href="pastries.html">PASTRIES</a></li>
+            <li><a href="desserts.html">BREAD/DESSERTS</a></li>
+            <li><a href="bread.html">BEVERAGES</a></li>
+            <li><a href="identity.html">OUR IDENTITY</a></li>
+            <li><a href="reachout.html">REACH OUT</a></li>
+        </ul>
+        <div class="cart-icon">
+            <a href="cart.html">
+                <a href="addtocart.html" class="add-to-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+    </nav>
+    <div class="container1">
+        <div class="search-box">
+            <label for="search"></label>
+            <input type="text" id="search" placeholder="Search">
+            
+        </div>
+        </div>
+        <div class="buttons">
+          
+            <a href="discount.html" class="order-now">DISCOUNT</a><br>
+
+        </div>
+    <br><br><br><br>
+    <h2>THEME CAKES</h2>
+    <br><br>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="cake-item">
+                <a href="ordernow.html">
+                <img src="images/kit_kat_cake.jpg" alt="Cake Image"><h2>Express</h2>
+            </a>
+            </div>
+            <div class="cake-item"> <a href="birthday.html"><img src="./images/Birthday_cakes.jpg" alt="Birthday"><h2>Birthday</h2></a></div>
+            <div class="cake-item"><a href="wedding.html"><img src="./images/cake7.jpeg" alt="wedding"><h2>Wedding</h2></a></div>
+            <div class="cake-item"><a href="heart.html"><img src="./images/20 Romantic Heart Shape Cake Designs With Images In 2024.jpeg" alt="Heart"><h2>Heart</h2></a></div>
+            <div class="cake-item"><a href="girls.html"><img src="./images/20 Latest Barbie Doll Cake Designs With Images 2024.jpeg" alt="Girls"><h2>Girl's</h2></a></div>
+            <div class="cake-item"><a href="Boys.html"><img src="./images/20+Spiderman Birthday Cake Ideas _ Light Blue Spiderman Cake (1).jpeg" alt="Boys"><h2>Boy's</h2></a></div>
+            <div class="cake-item"><a href="step.html"><img src="./images/40 Unique and Classy Wedding Cake Ideas.jpeg" alt="Numeric"><h2>Tier/Step</h2></a></div>
+            <div class="cake-item"><a href="shape.html"><img src="./images/9444cc0c-8a77-4438-ae5e-d85c37f9388b.jpeg" alt="Shape"><h2>Shape</h2></a></div>
+            <div class="cake-item"><a href="drawing.html"><img src="./images/f006-_3_to_5_1.jpg" alt="Drawing"><h2>Drawing</h2></a></div>
+            <div class="cake-item"><a href="babyshower.html">
+                <img src="./images/Fun and Delicious Cakes for Your Pregnancy Reveal.jpeg" alt="Baby Shower">
+                <h2>Baby Shower</h2></a>
+            </div>
+            <div class="cake-item"><a href="pinata.html">
+                <img src="./images/090b30ed-0140-41c1-8254-b399a281841b.jpeg" alt="Photo Cake">
+                <h2>Pinata</h2></a>
+            </div>
+            <div class="cake-item"><a href="alphabet.html">
+                <img src="./images/Alphabet Cake.jpeg" alt="Alphabete">
+                <h2>Alphabet</h2></a>
+            </div>
+            <div class="cake-item" ><a href="Numeric.html">
+                <img src="./images/Snow white theme cake.jpeg" alt="Photo Cake">
+                <h2>Numeric</h2></a>
+
+            </div>
+            
+            <div class="cake-item"><a href="photo.html">
+                <img src="./images/Doraemon Fam Cartoon Cake _ JS yummy_.jpeg" alt="Photo Cake">
+                <h2>Photo</h2></a>
+            </div> 
+            
+        </div>
+    </div>
+    <script>
+        const track = document.querySelector(".carousel");
+
+        function moveCarousel() {
+            let firstImage = track.firstElementChild;
+            track.style.transition = "transform 0.5s linear";
+            // track.style.transform = `translateX(-${firstImage.clientWidth + 0}px)`;
+
+            setTimeout(() => {
+                track.appendChild(firstImage); 
+                track.style.transition = "none"; 
+                track.style.transform = "translateX(0)";
+            }, 0);
+        }
+
+        setInterval(moveCarousel, 2000);
+    </script>
+
+    <br><br><br><br>
+   
+    
+    <h2>BOY'S CAKES</h2>
+    <br><br>
+    
+    <section class="product-section">
+        <div class="product-container">
+          
+            <div class="product-card">
+                <img src="./images/20+Spiderman Birthday Cake Ideas _ Light Blue Spiderman Cake (1).jpeg" alt="Birthday cake">
+                <h3>Spiderman Cake</h3>
+                <div class="quantity">
+                    <span class="piece">1 Kg</span>
+                    <span class="counter">
+                        <button class="decrease">-</button>
+                        <span class="count">1</span>
+                        <button class="increase">+</button>
+                    </span>
+                </div>
+                <fig>Price Varies as per KG</fig>
+                <p class="price">₹2690.00</p>
+                <button class="cart">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <img src="./images/20+ Impressive Birthday Cake Designs For Men 2024.jpeg" alt="Princess cake">
+                <h3>Football Theme Cake</h3>
+                <div class="quantity">
+                    <span class="piece">1 Kg</span>
+                    <span class="counter">
+                        <button class="decrease">-</button>
+                        <span class="count">1</span>
+                        <button class="increase">+</button>
+                    </span>
+                </div>
+                <fig>Price Varies as per KG</fig>
+                <p class="price">₹3540.00</p>
+                <button class="cart">ADD TO CART</button>
+            </div>
+
+          
+            <div class="product-card">
+                <img src="./images/Its a wild 1!.jpeg" alt="purple cake">
+                <h3>Jungle Cake</h3>
+                <div class="quantity">
+                    <span class="piece">1 Kg</span>
+                    <span class="counter">
+                        <button class="decrease">-</button>
+                        <span class="count">1</span>
+                        <button class="increase">+</button>
+                    </span>
+                </div>
+                <fig>Price Varies as per KG</fig>
+                <p class="price">₹3540.00</p>
+                <button class="cart">ADD TO CART</button>
+            </div>
+            
+         
+
+         
+            <div class="product-card">
+                <img src="./images/Cakes For Boys at Loisnicholson.jpeg" alt="red velvet">
+                <h3>Car Race Theme Cake</h3>
+                <div class="quantity">
+                    <span class="piece"> 1 Kg</span>
+                    <span class="counter">
+                        <button class="decrease">-</button>
+                        <span class="count">1</span>
+                        <button class="increase">+</button>
+                    </span>
+                </div>
+                <fig>Price Varies as per KG</fig>
+                <p class="price">₹2620.00</p>
+                <button class="cart">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <img src="./images/Nautical Sailboat Cake with Ombre Waves and Anchor Details.jpeg" alt="Bubble Tea">
+                <h3>Nautical Sail Boat Cake</h3>
+                <div class="quantity">
+                    <span class="piece">1 Kg</span>
+                    <span class="counter">
+                        <button class="decrease">-</button>
+                        <span class="count">1</span>
+                        <button class="increase">+</button>
+                    </span>
+                </div>
+                <fig>Price Varies as per KG</fig>
+                <p class="price">₹2640.00</p>
+                <button class="cart">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <img src="./images/61 Batman Cake Design Ideas [GALLERY] - BakeSpark.jpeg" alt="Bubble Tea">
+                <h3>Batman Theme Cake</h3>
+                <div class="quantity">
+                    <span class="piece">1 Kg</span>
+                    <span class="counter">
+                        <button class="decrease">-</button>
+                        <span class="count">1</span>
+                        <button class="increase">+</button>
+                    </span>
+                </div>
+                <fig>Price Varies as per KG</fig>
+                <p class="price">₹2640.00</p>
+                <button class="cart">ADD TO CART</button>
+            </div>
+              
+            <div class="product-card">
+                <img src="./images/Baked with love 💕 Eggless Redvelvet cake….jpeg" alt="rosemilk">
+                <h3>Micky Mouse Cake</h3>
+                <div class="quantity">
+                    <span class="piece">1 Kg</span>
+                    <span class="counter">
+                        <button class="decrease">-</button>
+                        <span class="count">1</span>
+                        <button class="increase">+</button>
+                    </span>
+                </div>
+                
+                <fig>Price Varies as per KG</fig>
+                <p class="price">₹2240.00</p>
+                <button class="cart">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <img src="./images/16 Amazing Football Cake Ideas For Beginner And Pro Bakers_.jpeg" alt="kitkat">
+                <h3>Football Theme Cake</h3>
+                <div class="quantity">
+                    <span class="piece">1 Kg</span>
+                    <span class="counter">
+                        <button class="decrease">-</button>
+                        <span class="count">1</span>
+                        <button class="increase">+</button>
+                    </span>
+                </div>
+                <fig>Price Varies as per KG</fig>
+                <p class="price">₹2640.00</p>
+                <button class="cart">ADD TO CART</button>
+            </div>
+      
+        
+        </div>
+    </section>
+    <br><br><br><br><br><br>
+  
+    <div class="form">
+        <div class="form-container">
+            <figcaption>ENQUIRY FORM</figcaption><br><br>
+            <p>Let Us Know About Your Taste!!<br>We Will Customise It Without Any Compromise!!</p><br><br>
+
+            <form id="enquiryForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="text" id="eggType" placeholder="Egg/Eggless" required>
+                </div><br><br>
+
+                <div class="form-group">
+                    <input type="tel" id="contact" placeholder="Contact" required>
+                    <input type="text" id="flour" placeholder="Which Flour To Be Used?" required>
+                </div>
+                <br><br>
+
+                <div class="form-group">
+                    <input type="email" id="mail" placeholder="Mail ID" required>
+                    <input type="text" id="occasion" placeholder="Occasion" required>
+                </div>
+                <br><br>
+                <div class="form-group">
+                    <textarea id="occasionText" placeholder="Type Your Occasion" rows="3" cols="5" required></textarea>
+                </div>
+                <br><br>
+
+                <button type="submit">Convey Us</button>
+            </form>
+        </div>
+    </div>
+    <br><br><br><br>
+    <footer class="footer">
+        <div class="footer-container">
+        
+            <div class="footer-logo">
+                <img src="./images/bakerylogo.png" alt="Sweet Cake Logo">
+            </div>
+            <div class="footer-section">
+                <h3>QUICK LINKS</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Order Now</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Our Tale</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>OUR VENUE</h3>
+                <p>New No: 22, Old No: 40,<br> Street, East ABC, XYZ,<br> Chennai</p>
+                <p>9123456789</p>
+                <p><a href="mailto:sweetcakebakers@gmail.com">sweetcakebakers@gmail.com</a></p>
+            </div>
+            <br><br>
+            <div class="footer-section">
+                <h3>WE ARE SOCIAL</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="./images/whatsapp-icon-free-png.webp" alt="WhatsApp"></a>
+                    <a href="#"><img src="./images/Instagram_icon.png.webp" alt="Instagram"></a>
+                    <a href="#"><img src="./images/facebook-logo-icon-free-png.webp" alt="Facebook"></a>
+                    <a href="#"><img src="./images/youtube-7949229_1280.webp" alt="YouTube"></a>
+                    <a href="#"><img src="./images/OIP.jpg" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="footer-bottom">
+            <p>Copyright 2025 MN Organic India Pvt. Ltd.</p>
+        </div>
+    </footer>
+    <br><br><br><br><br><br><br>
+    
+    
+
+    <!-- Cart Count Display -->
+    <script src="ordernow.js"></script>
+
+<script src="./assets/cart1.js" defer></script>
+<!-- <script src="./cake2.js"></script> -->
+</body>
+</html>
+
+
+   

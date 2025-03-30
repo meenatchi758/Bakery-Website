@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("./images/0ac161b7-4e40-43f4-b143-c30e4d3fb4b7.jpeg") center center / cover no-repeat;
+            filter: blur(3px);
+            z-index: -1;
+            opacity: 1.5;
+        }
+        
+        /* Form Container */
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .form-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, #5D4037, #8D6E63);
+        }
+        
+        /* Heading */
+        h2 {
+            color: #5D4037;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            position: relative;
+            text-align: center;
+        }
+        
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #5D4037, #8D6E63);
+            border-radius: 3px;
+        }
+        
+        /* Floating Label Input Fields */
+        .input-group {
+            position: relative;
+            width: 100%;
+            margin-bottom: 25px;
+        }
+        
+        .input-group input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            background: #fff;
+            transition: all 0.3s ease;
+            outline: none;
+            color: #333;
+        }
+        
+        .input-group input:focus {
+            border-color: #8D6E63;
+            box-shadow: 0 0 0 3px rgba(141, 110, 99, 0.2);
+        }
+        
+        .input-group input.error {
+            border-color: #e53935;
+        }
+        
+        .input-group input.valid {
+            border-color: #43a047;
+        }
+        
+        /* Floating Label Effect */
+        .input-group label {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            transform: translateY(0);
+            font-size: 16px;
+            color: #757575;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            background: transparent;
+            padding: 0 5px;
+        }
+        
+        .input-group input:focus ~ label,
+        .input-group input:not(:placeholder-shown) ~ label {
+            top: -10px;
+            font-size: 12px;
+            color: #5D4037;
+            background: white;
+            padding: 0 5px;
+            font-weight: 500;
+        }
+        
+        .input-group input.error ~ label {
+            color: #e53935;
+        }
+        
+        /* Error Messages */
+        .error-message {
+            color: #e53935;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+            text-align: left;
+            padding-left: 5px;
+        }
+        
+        /* Submit Button */
+        button {
+            background: linear-gradient(135deg, #5D4037, #8D6E63);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(93, 64, 55, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(93, 64, 55, 0.4);
+        }
+        
+        button:hover::before {
+            left: 100%;
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        /* Success Message */
+        .success-message {
+            display: none;
+            color: #43a047;
+            font-size: 16px;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .form-container {
+                padding: 30px 20px;
+            }
+            
+            h2 {
+                font-size: 28px;
+                margin-bottom: 25px;
+            }
+            
+            .input-group input {
+                padding: 12px 15px;
+                font-size: 15px;
+            }
+            
+            button {
+                padding: 14px;
+                font-size: 16px;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .form-container {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Shipping Address</h2>
+        <form id="checkoutForm">
+            <div class="input-group">
+                <input type="text" id="name" placeholder=" " required>
+                <label for="name">Full Name</label>
+                <div class="error-message" id="name-error">Please enter your full name</div>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" placeholder=" " required>
+                <label for="email">Email Address</label>
+                <div class="error-message" id="email-error">Please enter a valid email address</div>
+            </div>
+            <div class="input-group">
+                <input type="tel" id="phone" placeholder=" " required>
+                <label for="phone">Phone Number</label>
+                <div class="error-message" id="phone-error">Please enter a valid phone number</div>
+            </div>
+            <div class="input-group">
+                <input type="text" id="pincode" placeholder=" " required>
+                <label for="pincode">Postal Code</label>
+                <div class="error-message" id="pincode-error">Please enter a valid postal code</div>
+            </div>
+            <div class="input-group">
+                <input type="text" id="address" placeholder=" " required>
+                <label for="address">Street Address</label>
+                <div class="error-message" id="address-error">Please enter your street address</div>
+            </div>
+            <button type="submit">
+                Continue to Payment <i class="fas fa-arrow-right"></i>
+            </button>
+            <div class="success-message" id="success-message">
+                <i class="fas fa-check-circle"></i>Successfully Submitted
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('checkoutForm');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const phoneInput = document.getElementById('phone');
+            const pincodeInput = document.getElementById('pincode');
+            const addressInput = document.getElementById('address');
+            const successMessage = document.getElementById('success-message');
+
+            // Validation functions
+            function validateName() {
+                const name = nameInput.value.trim();
+                if (name === '') {
+                    showError(nameInput, 'name-error', 'Please enter your full name');
+                    return false;
+                } else if (!/^[a-zA-Z ]{2,}$/.test(name)) {
+                    showError(nameInput, 'name-error', 'Please enter a valid name');
+                    return false;
+                } else {
+                    showSuccess(nameInput, 'name-error');
+                    return true;
+                }
+            }
+
+            function validateEmail() {
+                const email = emailInput.value.trim();
+                if (email === '') {
+                    showError(emailInput, 'email-error', 'Please enter your email address');
+                    return false;
+                } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    showError(emailInput, 'email-error', 'Please enter a valid email address');
+                    return false;
+                } else {
+                    showSuccess(emailInput, 'email-error');
+                    return true;
+                }
+            }
+
+            function validatePhone() {
+                const phone = phoneInput.value.trim();
+                if (phone === '') {
+                    showError(phoneInput, 'phone-error', 'Please enter your phone number');
+                    return false;
+                } else if (!/^[0-9]{10}$/.test(phone)) {
+                    showError(phoneInput, 'phone-error', 'Please enter a valid phone number (10 digits)');
+                    return false;
+                } else {
+                    showSuccess(phoneInput, 'phone-error');
+                    return true;
+                }
+            }
+
+            function validatePincode() {
+                const pincode = pincodeInput.value.trim();
+                if (pincode === '') {
+                    showError(pincodeInput, 'pincode-error', 'Please enter your postal code');
+                    return false;
+                } else if (!/^[0-9]{4,10}$/.test(pincode)) {
+                    showError(pincodeInput, 'pincode-error', 'Please enter a valid postal code');
+                    return false;
+                } else {
+                    showSuccess(pincodeInput, 'pincode-error');
+                    return true;
+                }
+            }
+
+            function validateAddress() {
+                const address = addressInput.value.trim();
+                if (address === '') {
+                    showError(addressInput, 'address-error', 'Please enter your street address');
+                    return false;
+                } else if (address.length < 10) {
+                    showError(addressInput, 'address-error', 'Address should be at least 10 characters');
+                    return false;
+                } else {
+                    showSuccess(addressInput, 'address-error');
+                    return true;
+                }
+            }
+
+            function showError(input, errorId, message) {
+                const errorElement = document.getElementById(errorId);
+                input.classList.add('error');
+                input.classList.remove('valid');
+                errorElement.textContent = message;
+                errorElement.style.display = 'block';
+            }
+
+            function showSuccess(input, errorId) {
+                const errorElement = document.getElementById(errorId);
+                input.classList.remove('error');
+                input.classList.add('valid');
+                errorElement.style.display = 'none';
+            }
+
+            // Event listeners for real-time validation
+            nameInput.addEventListener('input', validateName);
+            nameInput.addEventListener('blur', validateName);
+            
+            emailInput.addEventListener('input', validateEmail);
+            emailInput.addEventListener('blur', validateEmail);
+            
+            phoneInput.addEventListener('input', validatePhone);
+            phoneInput.addEventListener('blur', validatePhone);
+            
+            pincodeInput.addEventListener('input', validatePincode);
+            pincodeInput.addEventListener('blur', validatePincode);
+            
+            addressInput.addEventListener('input', validateAddress);
+            addressInput.addEventListener('blur', validateAddress);
+
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Validate all fields
+                const isNameValid = validateName();
+                const isEmailValid = validateEmail();
+                const isPhoneValid = validatePhone();
+                const isPincodeValid = validatePincode();
+                const isAddressValid = validateAddress();
+                
+                if (isNameValid && isEmailValid && isPhoneValid && isPincodeValid && isAddressValid) {
+                    // Form is valid - show success message
+                    successMessage.style.display = 'block';
+                    form.reset();
+                    
+                    // Remove valid classes after submission
+                    document.querySelectorAll('input').forEach(input => {
+                        input.classList.remove('valid');
+                    });
+                    
+                    // Hide success message after 3 seconds
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                        // In a real application, you would submit the form or redirect
+                        window.location.href = 'payment.html';
+                    }, 3000);
+                } else {
+                    // Scroll to first error
+                    const firstError = document.querySelector('.error');
+                    if (firstError) {
+                        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Cake Navigation</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./images/bakerylogo.png" alt="Sweet Cake Logo">
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-links">
+            <li><a href="cakes.html">HOME</a></li>
+            <li><a href="pastries.html">THEMED</a></li>
+            <li><a href="pastries.html">PASTRIES</a></li>
+            <li><a href="desserts.html">BREAD/DESSERTS</a></li>
+            <li><a href="bread.html">BEVERAGES</a></li>
+            <li><a href="identity.html">OUR IDENTITY</a></li>
+            <li><a href="reachout.html">REACH OUT</a></li>
+        </ul>
+        <div class="cart-icon">
+            <a href="cart.html">
+                <a href="addtocart.html" class="add-to-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+    </nav>
+    <script>
+        function toggleMenu() {
+     document.querySelector(".nav-links").classList.toggle("active");
+ }
+     </script>
+     <div class="container1">
+         <div class="search-box">
+             <label for="search"></label>
+             <input type="text" id="search" placeholder="Search">
+             
+         </div>
+       
+         <div class="buttons">
+           
+             <a href="ordernow.html" class="order-now">ORDER NOW</a>
+             <a href="#" class="login-signup" onclick="openModal()">LOGIN/SIGN UP</a><br>
+ 
+         </div>
+         </div>
+    <br><br><br><br>
+    <h2>BREAD/BUN</h2>
+    <br><br>
+    
+    <section class="product-section">
+        <div class="product-container">
+          
+            <div class="product-card">
+                <img src="./images/Easy Mango Tiramisu.jpeg" alt="Mango">
+                <h3>Mango Trimasu</h3>
+                <div class="quantity">
+                    <span class="piece">1 Pc</span>
+                    <span class="counter">
+                        <button class="decrease">-</button>
+                        <span class="count">1</span>
+                        <button class="increase">+</button>
+                    </span>
+                </div>
+                <p class="price">₹190.00</p>
+                <button class="cart">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <img src="./images/WheatSourdoughLoaf02_400x400.webp" alt="Bubble Tea">
+                <h3>Wheat Sourdough Loaf</h3>
+                <div class="quantity">
+                    <span class="piece">1 Pc</span>
+                    <span class="counter">
+                        <button class="decrease">-</button>
+                        <span class="count">1</span>
+                        <button class="increase">+</button>
+                    </span>
+                </div>
+                <p class="price">₹110.00</p>
+                <button class="cart">ADD TO CART</button>
+            </div>
+
+          
+            <div class="product-card">
+                <img src="./images/MultigrainLoaf_400x400.webp" alt="MultigrainLoaf_400x400">
+                <h3>MultigrainLoaf</h3>
+                <div class="quantity">
+                    <span class="piece">1 Pc</span>
+                    <span class="counter">
+                        <button class="decrease">-</button>
+                        <span class="count">1</span>
+                        <button class="increase">+</button>
+                    </span>
+                </div>
+                <p class="price">₹140.00</p>
+                <button class="cart">ADD TO CART</button>
+            </div>
+            
+           
+
+         
+            <div class="product-card">
+                <img src="./images/FrenchBaguette_400x400.webp" alt="Strawberry Milk Shake">
+                <h3> FrenchBaguette</h3>
+                <div class="quantity">
+                    <span class="piece">1 Pc</span>
+                    <span class="counter">
+                        <button class="decrease">-</button>
+                        <span class="count">1</span>
+                        <button class="increase">+</button>
+                    </span>
+                </div>
+                <p class="price">₹140.00</p>
+                <button class="cart">ADD TO CART</button>
+            </div>
+
+           
+            <div class="product-card">
+                <img src="./images/brioche-buns-paper-lined-board-680x1020.jpg" alt="Bubble Tea">
+                <h3>Broche Buns</h3>
+                <div class="quantity">
+                    <span class="piece">1 Pc</span>
+                    <span class="counter">
+                        <button class="decrease">-</button>
+                        <span class="count">1</span>
+                        <button class="increase">+</button>
+                    </span>
+                </div>
+                <p class="price">₹89.00</p>
+                <button class="cart">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <img src="./images/HIGH-RES_Spinach_Corn_Cheese_Sandwich_-_Square.webp" alt="Bubble Tea">
+                <h3>Spinach and Corn Cheese</h3>
+                <div class="quantity">
+                    <span class="piece">1 Pc</span>
+                    <span class="counter">
+                        <button class="decrease">-</button>
+                        <span class="count">1</span>
+                        <button class="increase">+</button>
+                    </span>
+                </div>
+                <p class="price">₹100.00</p>
+                <button class="cart">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <img src="./images/Gulab Jamun Recipe - How to make Tasty Gulab Jamun Easily at Home - Khaddoroshik.jpeg" alt="Bubble Tea">
+                <h3>Gulab Jamun</h3>
+                <div class="quantity">
+                    <span class="piece">1 Pc</span>
+                    <span class="counter">
+                        <button class="decrease">-</button>
+                        <span class="count">1</span>
+                        <button class="increase">+</button>
+                    </span>
+                </div>
+                <p class="price">₹230.00</p>
+                <button class="cart">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <img src="./images/Delicious Blueberry Desserts Collection.jpeg" alt="Bubble Tea">
+                <h3>Blast Blueberry</h3>
+                <div class="quantity">
+                    <span class="piece">1 Pc</span>
+                    <span class="counter">
+                        <button class="decrease">-</button>
+                        <span class="count">1</span>
+                        <button class="increase">+</button>
+                    </span>
+                </div>
+                <p class="price">₹190.00</p>
+                <button class="cart">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <img src="./images/Fruit Custard (Easy Indian Dessert).jpeg" alt="Bubble Tea">
+                <h3>Fruit Custard</h3>
+                <div class="quantity">
+                    <span class="piece">1 Pc</span>
+                    <span class="counter">
+                        <button class="decrease">-</button>
+                        <span class="count">1</span>
+                        <button class="increase">+</button>
+                    </span>
+                </div>
+                <p class="price">₹140.00</p>
+                <button class="cart">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <img src="./images/Caramel Custard Recipe.jpeg" alt="Bubble Tea">
+                <h3>Caramel Custard</h3>
+                <div class="quantity">
+                    <span class="piece">1 Pc</span>
+                    <span class="counter">
+                        <button class="decrease">-</button>
+                        <span class="count">1</span>
+                        <button class="increase">+</button>
+                    </span>
+                </div>
+                <p class="price">₹140.00</p>
+                <button class="cart">ADD TO CART</button>
+            </div>
+           
+            <div class="product-card">
+                <img src="./images/LONDON’S VIRAL CHOCOLATE STRAWBERRY - Bake with Shivesh.jpeg" alt="Bubble Tea">
+                <h3>Strawberry Chocolate</h3>
+                <div class="quantity">
+                    <span class="piece">1 Pc</span>
+                    <span class="counter">
+                        <button class="decrease">-</button>
+                        <span class="count">1</span>
+                        <button class="increase">+</button>
+                    </span>
+                </div>
+                <p class="price">₹160.00</p>
+                <button class="cart">ADD TO CART</button>
+            </div>
+            <div class="product-card">
+                <img src="./images/Kheer (Authentic Indian Rice Pudding).jpeg" alt="Bubble Tea">
+                <h3>Delecious Kheer</h3>
+                <div class="quantity">
+                    <span class="piece">1 Pc</span>
+                    <span class="counter">
+                        <button class="decrease">-</button>
+                        <span class="count">1</span>
+                        <button class="increase">+</button>
+                    </span>
+                </div>
+                <p class="price">₹160.00</p>
+                <button class="cart">ADD TO CART</button>
+            </div>
+
+        </div>
+    </section>
+    <br><br><br>
+    <div class="form">
+        <div class="form-container">
+            <figcaption>ENQUIRY FORM</figcaption><br><br>
+            <p>Let Us Know About Your Taste!!<br>We Will Customise It Without Any Compromise!!</p><br><br>
+
+            <form id="enquiryForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="text" id="eggType" placeholder="Egg/Eggless" required>
+                </div><br><br>
+
+                <div class="form-group">
+                    <input type="tel" id="contact" placeholder="Contact" required>
+                    <input type="text" id="flour" placeholder="Which Flour To Be Used?" required>
+                </div>
+                <br><br>
+
+                <div class="form-group">
+                    <input type="email" id="mail" placeholder="Mail ID" required>
+                    <input type="text" id="occasion" placeholder="Occasion" required>
+                </div>
+                <br><br>
+                <div class="form-group">
+                    <textarea id="occasionText" placeholder="Type Your Occasion" rows="3" cols="5" required></textarea>
+                </div>
+                <br><br>
+
+                <button type="submit">Convey Us</button>
+            </form>
+        </div>
+    </div>
+    <br><br><br><br>
+    <footer class="footer">
+        <div class="footer-container">
+        
+            <div class="footer-logo">
+                <img src="./images/bakerylogo.png" alt="Sweet Cake Logo">
+            </div>
+            <div class="footer-section">
+                <h3>QUICK LINKS</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Order Now</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Our Tale</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>OUR VENUE</h3>
+                <p>New No: 22, Old No: 40,<br> Street, East ABC, XYZ,<br> Chennai</p>
+                <p>9123456789</p>
+                <p><a href="mailto:sweetcakebakers@gmail.com">sweetcakebakers@gmail.com</a></p>
+            </div>
+            <br><br>
+            <div class="footer-section">
+                <h3>WE ARE SOCIAL</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="./images/whatsapp-icon-free-png.webp" alt="WhatsApp"></a>
+                    <a href="#"><img src="./images/Instagram_icon.png.webp" alt="Instagram"></a>
+                    <a href="#"><img src="./images/facebook-logo-icon-free-png.webp" alt="Facebook"></a>
+                    <a href="#"><img src="./images/youtube-7949229_1280.webp" alt="YouTube"></a>
+                    <a href="#"><img src="./images/OIP.jpg" alt="Twitter"></a>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="footer-bottom">
+            <p>Copyright 2025 MN Organic India Pvt. Ltd.</p>
+        </div>
+    </footer>
+    <br><br><br><br><br><br><br>
+    <div class="login-modal" id="loginModal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>WELCOME TO SWEET DESSERT HOUSE CAKE</h2>
+          
+            <!-- Login Form -->
+            <form class="login-form" id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="loginName" placeholder="Name" required>
+                    <span class="error-message" id="loginNameError"></span>
+                </div>
+                
+                <div class="input-group">
+                    <input type="email" id="loginEmail" placeholder="Email" required>
+                    <span class="error-message" id="loginEmailError"></span>
+                </div>
+                
+                <div class="input-group">
+                    <input type="tel" id="loginMobile" placeholder="Mobile Number" required>
+                    <span class="error-message" id="loginMobileError"></span>
+                </div>
+                
+                <div class="input-group">
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <span class="error-message" id="loginPasswordError"></span>
+                </div>
+                
+                <button type="submit" class="btn">LOGIN</button>
+            </form>
+        </div>
+        </div>
+        
+        <!-- Success Popup -->
+        <div class="popup" id="popup">
+        <img src="./images/bakerylogo.png" alt="Sweet Cake Logo">
+        <p>Welcome To Sweet Cake House</p>
+        <p>You are now logged in!</p>
+        </div>
+        
+            <script>
+                // Modal Functions
+                function openModal() {
+                    document.getElementById('loginModal').classList.add('active');
+                }
+        
+                function closeModal() {
+                    document.getElementById('loginModal').classList.remove('active');
+                    clearErrors();
+                }
+        
+                function clearErrors() {
+                    document.querySelectorAll('.error-message').forEach(el => {
+                        el.textContent = '';
+                    });
+                }
+        
+                function showError(elementId, message) {
+                    document.getElementById(elementId).textContent = message;
+                }
+        
+                // Login Form Submission
+                document.getElementById('loginForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    clearErrors();
+                    
+                    const name = document.getElementById('loginName').value.trim();
+                    const email = document.getElementById('loginEmail').value.trim();
+                    const mobile = document.getElementById('loginMobile').value.trim();
+                    const password = document.getElementById('loginPassword').value.trim();
+                    
+                    let isValid = true;
+                    
+                    if (!name) {
+                        showError('loginNameError', 'Name is required');
+                        isValid = false;
+                    }
+                    
+                    if (!email) {
+                        showError('loginEmailError', 'Email is required');
+                        isValid = false;
+                    } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+                        showError('loginEmailError', 'Invalid email format');
+                        isValid = false;
+                    }
+                    
+                    if (!mobile) {
+                        showError('loginMobileError', 'Mobile number is required');
+                        isValid = false;
+                    } else if (!/^\d{10}$/.test(mobile)) {
+                        showError('loginMobileError', 'Enter a valid 10-digit number');
+                        isValid = false;
+                    }
+                    
+                    if (!password) {
+                        showError('loginPasswordError', 'Password is required');
+                        isValid = false;
+                    } else if (password.length < 6) {
+                        showError('loginPasswordError', 'Password must be at least 6 characters');
+                        isValid = false;
+                    }
+                    
+                    if (isValid) {
+                        // Show success popup
+                        document.getElementById('popup').style.display = 'block';
+                        setTimeout(() => {
+                            document.getElementById('popup').style.display = 'none';
+                            closeModal();
+                        }, 3000);
+                        this.reset();
+                    }
+                });
+        
+                // Close modal when clicking outside
+                window.addEventListener('click', function(e) {
+                    if (e.target === document.getElementById('loginModal')) {
+                        closeModal();
+                    }
+                });
+                function openModal() {
+            document.getElementById("loginModal").style.display = "flex";
+        }
+        
+        // Close Modal Function
+        function closeModal() {
+            document.getElementById("loginModal").style.display = "none";
+        }
+        
+        // Close modal when clicking outside the box
+        window.onclick = function(event) {
+            let modal = document.getElementById("loginModal");
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+            </script>
+    <script src="./assets/cart1.js" defer></script>
+    <script src="./cake2.js"></script>
+
+</body>
+</html>
+

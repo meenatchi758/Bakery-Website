@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up</title>
+    <link rel="stylesheet" href="cake.css">
+</head>
+<body>
+    <div class="dfh">
+    
+    <h2>WELCOME TO SWEET DESSERT HOUSE CAKE</h2>
+    <section class="sign">
+        <form class="login-form" id="loginForm">
+            <div class="input-group">
+                <span class="icon">👤</span>
+                <input type="text" id="name" placeholder="Name" required>
+                <span class="error-message" id="nameError"></span>
+            </div>
+        
+            <div class="input-group">
+                <span class="icon">📧</span>
+                <input type="email" id="email" placeholder="Email" required>
+                <span class="error-message" id="emailError"></span>
+            </div>
+        
+            <div class="input-group">
+                <span class="icon">📞</span>
+                <input type="tel" id="mobile" placeholder="Mobile" required>
+                <span class="error-message" id="mobileError"></span>
+            </div>
+        
+            <div class="input-group">
+                <span class="icon">🔒</span>
+                <input type="password" id="password" placeholder="Password" required>
+                <span class="error-message" id="passwordError"></span>
+            </div>
+        
+            <button type="submit" class="btn">LOGIN/SIGN UP</button>
+        </form>
+        
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get input values
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let mobile = document.getElementById("mobile").value.trim();
+    let password = document.getElementById("password").value.trim();
+
+    // Regular expressions for validation
+    let namePattern = /^[A-Za-z\s]+$/; // Only letters and spaces
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Valid email format
+    let mobilePattern = /^[0-9]{10}$/; // Exactly 10 digits
+
+    // Clear previous errors
+    clearErrors();
+
+    let isValid = true;
+
+    // Name Validation
+    if (!name) {
+        showError("nameError", "Name is required.");
+        isValid = false;
+    } else if (!namePattern.test(name)) {
+        showError("nameError", "Name can only contain letters.");
+        isValid = false;
+    }
+
+    // Email Validation
+    if (!email) {
+        showError("emailError", "Email is required.");
+        isValid = false;
+    } else if (!emailPattern.test(email)) {
+        showError("emailError", "Invalid email format.");
+        isValid = false;
+    }
+
+    // Mobile Validation
+    if (!mobile) {
+        showError("mobileError", "Mobile number is required.");
+        isValid = false;
+    } else if (!mobilePattern.test(mobile)) {
+        showError("mobileError", "Enter a valid 10-digit mobile number.");
+        isValid = false;
+    }
+
+    // Password Validation
+    if (!password) {
+        showError("passwordError", "Password is required.");
+        isValid = false;
+    } else if (password.length < 6) {
+        showError("passwordError", "Password must be at least 6 characters.");
+        isValid = false;
+    }
+
+    if (isValid) {
+        alert("Login successful!");
+        this.submit(); // Submit the form after validation
+    }
+});
+
+// Function to clear previous errors
+function clearErrors() {
+    document.querySelectorAll(".error-message").forEach(error => error.textContent = "");
+}
+
+// Function to show error messages
+function showError(id, message) {
+    document.getElementById(id).textContent = message;
+    document.getElementById(id).style.color = "red";
+}
+
+    </script>
+</body>
+</html>
