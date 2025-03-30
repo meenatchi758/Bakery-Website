@@ -206,3 +206,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+   document.addEventListener("DOMContentLoaded", () => {
+          const searchInput = document.getElementById("search");
+          const productCards = document.querySelectorAll(".product-card");
+      
+          searchInput.addEventListener("input", () => {
+              let filter = searchInput.value.toLowerCase();
+      
+              productCards.forEach(card => {
+                  let productName = card.querySelector("h3").textContent.toLowerCase();
+                  if (productName.includes(filter)) {
+                      card.style.display = "inline-block"; 
+                  } else {
+                      card.style.display = "none";
+                  }
+              });
+          });
+      });
+
+
+
