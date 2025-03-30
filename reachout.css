@@ -1012,6 +1012,7 @@ input, textarea {
 }
 
 .contact-info {
+    margin-top:70px;
     flex: 1;
     padding: 40px;
     color: #3E2723;
